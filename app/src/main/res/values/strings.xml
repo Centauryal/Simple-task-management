@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Simple Task Management</string>
+    <string name="content_desc_add_btn">Add button</string>
+</resources>
