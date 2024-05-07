@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Simple Task Management</string>
+
+    <string name="txt_message_no_notes">No notes found!</string>
+    <string name="txt_delete_all">Delete All Notes</string>
+
+    <string name="dialog_txt_title_new_note">New Note</string>
+    <string name="dialog_txt_title_edit_note">Update Note</string>
+
+    <string name="hint_enter_note">Enter your note!</string>
+
     <string name="content_desc_add_btn">Add button</string>
 </resources>
