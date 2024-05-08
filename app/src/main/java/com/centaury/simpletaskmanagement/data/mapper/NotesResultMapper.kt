@@ -13,12 +13,14 @@ class NotesResultMapper {
         NoteEntity(
             noteModel.id,
             noteModel.title,
+            noteModel.status,
             noteModel.date,
         )
 
     private fun NoteEntity.toNotes() = NotesModel(
         id = this.id,
         title = this.title,
+        status = this.status,
         date = this.date
     )
 }

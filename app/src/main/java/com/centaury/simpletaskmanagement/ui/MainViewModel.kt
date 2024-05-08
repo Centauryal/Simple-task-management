@@ -12,12 +12,12 @@ class MainViewModel(
     private val simpleTaskRepository: SimpleTaskRepository,
 ) : ViewModel() {
 
-    private val _getAllNotes = MutableLiveData<Any>()
-    val getAllNotes: LiveData<Any>
+    private val _getAllNotes = MutableLiveData<List<NotesModel>>()
+    val getAllNotes: LiveData<List<NotesModel>>
         get() = _getAllNotes
 
-    private val _getNoteById = MutableLiveData<Any>()
-    val getNoteById: LiveData<Any>
+    private val _getNoteById = MutableLiveData<NotesModel>()
+    val getNoteById: LiveData<NotesModel>
         get() = _getNoteById
 
     private val _insertNote = MutableLiveData<Any>()
@@ -48,31 +48,31 @@ class MainViewModel(
 
     fun getNoteById(id: Int) {
         viewModelScope.launch {
-            _getAllNotes.postValue(simpleTaskRepository.getNoteById(id))
+            _getNoteById.postValue(simpleTaskRepository.getNoteById(id))
         }
     }
 
     fun setInsertNote(notesModel: NotesModel) {
         viewModelScope.launch {
-            _getAllNotes.postValue(simpleTaskRepository.insertNote(notesModel))
+            _insertNote.postValue(simpleTaskRepository.insertNote(notesModel))
         }
     }
 
     fun setUpdateNote(notesModel: NotesModel) {
         viewModelScope.launch {
-            _getAllNotes.postValue(simpleTaskRepository.updateNote(notesModel))
+            _updateNote.postValue(simpleTaskRepository.updateNote(notesModel))
         }
     }
 
     fun deleteNote(notesModel: NotesModel) {
         viewModelScope.launch {
-            _getAllNotes.postValue(simpleTaskRepository.deleteNote(notesModel))
+            _deleteNote.postValue(simpleTaskRepository.deleteNote(notesModel))
         }
     }
 
     fun deleteAllNotes() {
         viewModelScope.launch {
-            _getAllNotes.postValue(simpleTaskRepository.deleteAllNotes())
+            _deleteAllNotes.postValue(simpleTaskRepository.deleteAllNotes())
         }
     }
 }

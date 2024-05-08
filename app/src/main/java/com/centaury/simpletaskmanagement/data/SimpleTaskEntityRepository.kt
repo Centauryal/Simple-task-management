@@ -1,7 +1,5 @@
 package com.centaury.simpletaskmanagement.data
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.map
 import com.centaury.simpletaskmanagement.data.db.NotesRepository
 import com.centaury.simpletaskmanagement.data.mapper.NotesResultMapper
 import com.centaury.simpletaskmanagement.domain.SimpleTaskRepository
@@ -13,9 +11,9 @@ class SimpleTaskEntityRepository(
     private val notesRepository: NotesRepository,
     private val notesResultMapper: NotesResultMapper,
 ): SimpleTaskRepository {
-    override suspend fun getAllNotes(): LiveData<List<NotesModel>> {
+    override suspend fun getAllNotes(): List<NotesModel> {
         return withContext(Dispatchers.IO) {
-            notesRepository.getAllNotes().map { notesResultMapper.transformNotes(it) }
+            notesResultMapper.transformNotes(notesRepository.getAllNotes())
         }
     }
 

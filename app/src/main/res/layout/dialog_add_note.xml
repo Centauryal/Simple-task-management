@@ -15,7 +15,7 @@
         android:textSize="@dimen/_20ssp" />
 
     <EditText
-        android:id="@+id/txt_dialog_note"
+        android:id="@+id/ed_dialog_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"

@@ -13,6 +13,9 @@ data class NoteEntity(
     @ColumnInfo(name = "note")
     val title: String,
 
+    @ColumnInfo(name = "status")
+    val status: String,
+
     @ColumnInfo(name = "timestamp")
     val date: Date = Date(),
 )

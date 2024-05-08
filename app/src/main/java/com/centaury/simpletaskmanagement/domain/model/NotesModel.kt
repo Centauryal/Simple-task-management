@@ -8,5 +8,6 @@ import java.util.Date
 data class NotesModel(
     val id: Int,
     val title: String,
+    val status: String,
     val date: Date
 ) : Parcelable

@@ -1,10 +1,8 @@
 package com.centaury.simpletaskmanagement.data.db
 
-import androidx.lifecycle.LiveData
-
 interface NotesEntityData {
 
-    fun getAllNotes(): LiveData<List<NoteEntity>>
+    fun getAllNotes(): List<NoteEntity>
 
     fun getNoteById(id: Int): NoteEntity
 
