@@ -64,6 +64,8 @@ dependencies {
 
     implementation libs.gson
 
+    implementation libs.sql.cipher
+
     implementation libs.sdp.android
     implementation libs.ssp.android
 

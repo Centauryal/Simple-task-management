@@ -16,6 +16,7 @@ lifeCycle = "2.7.0"
 navigation = "2.7.7"
 koin = "3.5.3"
 gson = "2.10.1"
+sqlCipher = "4.5.4"
 intuit = "1.1.1"
 
 [libraries]
@@ -35,6 +36,7 @@ navigation-fragment = { group = "androidx.navigation", name = "navigation-fragme
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+sql-cipher = { group = "net.zetetic", name = "android-database-sqlcipher", version.ref = "sqlCipher" }
 sdp-android = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "intuit" }
 ssp-android = { group = "com.intuit.ssp", name = "ssp-android", version.ref = "intuit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
